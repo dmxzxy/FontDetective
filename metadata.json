@@ -1,0 +1,7 @@
+{
+  "name": "FontDetective",
+  "description": "Identify fonts in images by comparing them against your own local font files using Gemini Vision.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
