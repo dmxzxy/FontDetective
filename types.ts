@@ -4,6 +4,19 @@ export interface LoadedFont {
   file: File;
 }
 
+export interface FontPairing {
+  name: string;
+  reason: string;
+  usage: string;
+}
+
+export interface DetailedMatch {
+  textSegment: string;
+  fontName: string;
+  confidence: number;
+  reasoning: string;
+}
+
 export interface AnalysisResult {
   matchFound: boolean;
   bestMatchFontName: string;
@@ -11,6 +24,8 @@ export interface AnalysisResult {
   reasoning: string;
   similarities: string[];
   differences: string[];
+  detailedMatches: DetailedMatch[];
+  recommendations?: FontPairing[];
 }
 
 export interface ProcessingStep {
